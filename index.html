@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div>
+      <h1 id="titulo">Cadastro do Estudante</h1>  
+      <p id="subtitulo">Complete os dados abaixo:</p>
+    </div>
+    <br>
+    <form>
+
+        <fieldset class="grupo">
+            <div class="campo">
+                <label><strong>Nome</strong></label>
+                <input type="text" name="Nome" id="nome" required>
+            </div>
+
+            <div class="campo">
+                <label><strong>Sobrenome</strong></label>
+                <input type="text" name="Sobrenome" id="sobrenome" required>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label><strong>E-mail</strong></label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        |<div class="campo">
+            <label><strong>Qual língua estrangeira possui conhecimento?</strong></label>
+            <label>
+                <input type="radio" name="language" value="inglês" checked>Inglês
+            </label>
+            <label>
+                <input type="radio" name="language" value="espanhol">Espanhol
+            </label>
+            <label>
+                <input type="radio" name="language" value="francês">Francês
+            </label>
+        </div>
+
+        <div class="campo">
+            <label for="nivel"><strong>Nível</strong></label>
+            <select id="nível">
+                <option selected disabled value="">Selecione:</option>
+                <option>Básico</option>
+                <option>Internediário</option>
+                <option>Avançado</option>
+            </select>
+        </div>
+
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Em que tem mais facilidade:</strong></label>
+                <input type="checkbox" id="opcao1" name="ler" value="ler">
+                <label for="opcao1">Ler</label>
+                <input type="checkbox" id="opcao2" name="escrever" value="escrever">
+                <label for="opcao2">Escrever</label>
+                <input type="checkbox" id="opcao3" name="ouvir" value="ouvir">
+                <label for="opcao3">Ouvir</label>
+                <input type="checkbox" id="opcao4" name="falar" value="falar">
+                <label for="opcao4">Falar</label>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <br>
+            <label><strong>Fale um pouco sobre como aprendeu a língua estrangeira e as formas que utiliza para estudar.</strong></label>
+            <textarea row="6" style="width: 26 em" id="estudo" name="estudo"></textarea>
+        </div>
+        <button class="botao" type="submit" onsubmit="">Concluído</button>            
+    </form>
+</body>
+</html>
